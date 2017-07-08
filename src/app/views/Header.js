@@ -8,6 +8,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
+import MainDrawer from './MainDrawer';
+
 const muiTheme = getMuiTheme({
     palette: {
         accent1Color: blueGrey50,
