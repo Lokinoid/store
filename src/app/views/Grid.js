@@ -16,60 +16,6 @@ const styles = {
   },
 };
 
-const tilesData = [
-    { 
-      id: 1,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Breakfast',
-      author: 'jill111',
-      featured: true,
-    },
-    {
-      id: 2,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Tasty burger',
-      author: 'pashminu',
-    },
-    {
-      id: 3,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Camera',
-      author: 'Danson67',
-    },
-    {
-      id: 4,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Morning',
-      author: 'fancycrave1',
-      featured: true,
-    },
-    {
-      id: 5,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Hats',
-      author: 'Hans',
-    },
-    {
-      id: 6,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Honey',
-      author: 'fancycravel',
-    },
-    {
-      id: 7,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Vegetables',
-      author: 'jill111',
-    },
-    {
-      id: 8,
-      img: 'img/shoes_male_2.jpg',
-      title: 'Water plant',
-      author: 'BkrmadtyaKarki',
-    },
-];
-
-
 class GridItem extends Component {
     constructor(props, context) {
         super(props, context);
@@ -96,8 +42,9 @@ class GridItem extends Component {
 class Grid extends Component {
     constructor(props, context) {
         super(props, context);
-        
-        this.gridItems = tilesData.map(tile => {
+        this.items = props.items;
+
+        this.gridItems = this.items.map(tile => {
           return (
             <GridTile
               key={tile.id}

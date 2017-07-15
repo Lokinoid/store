@@ -1,8 +1,8 @@
 import { ReduceStore } from 'flux/utils';
 import Immutable from 'immutable';
 
-import ActionTypes from '../actions/ActionTypes';
 import AppDispatcher from '../AppDispatcher';
+import ActionTypes from '../actions/ActionTypes';
 
 
 class ShoesStore extends ReduceStore {
@@ -16,9 +16,10 @@ class ShoesStore extends ReduceStore {
 
     reduce(state, action) {
         switch (action.type) {
-            case ActionTypes.ADD_TODO:
-                constole.log('ActionTypes.ADD_TODO');
-                return state;
+            case ActionTypes.ADD_ITEM:
+                console.log('ActionTypes.ADD_TODO', state, action);
+                const items = action.data.map(item => [item.id, item]);
+                return Immutable.OrderedMap(items);
 
             default:
                 return state;

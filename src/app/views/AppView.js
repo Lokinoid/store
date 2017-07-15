@@ -34,7 +34,7 @@ class AppView extends React.Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div style={styles.container}>
                     <Header />
-                    <Body />
+                    <Body items={this.props.items} />
                 </div>
             </MuiThemeProvider>
         );

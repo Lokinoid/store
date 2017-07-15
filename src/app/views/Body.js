@@ -45,7 +45,7 @@ class Body extends Component {
   render() {
     return (
       <div>
-        <Grid />
+        <Grid items={this.props.items}/>
       </div>
     );
   }
