@@ -28,7 +28,7 @@ const config = {
     }),
     // Transfer Files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      {from: 'assets'},
     ], path.resolve(__dirname, 'src')),
   ],
   module: {

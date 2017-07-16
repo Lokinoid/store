@@ -1,44 +1,44 @@
-import React, {Component} from 'react';
+import React from 'react';
 import AppBar from 'material-ui/AppBar';
-
-import {blueGrey50, blueGrey900} from 'material-ui/styles/colors';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+import Toolbar from 'material-ui/Toolbar';
+import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
-import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import { withStyles, createStyleSheet } from 'material-ui/styles';
+import Menu from 'material-ui-icons/Menu';
 
-import MainDrawer from './MainDrawer';
 
-const muiTheme = getMuiTheme({
-    palette: {
-        accent1Color: blueGrey50,
+const styleSheet = createStyleSheet('Header', {
+    root: {
+        width: '100%',
+    },
+    flex: {
+        flex: 1,
     },
 });
-
-const iconElemen = 
-    <IconButton>
-        <NavigationMenu
-            color={blueGrey900}
-        />
-    </IconButton>
-                
-class Header extends Component {
+             
+class Header extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.title = 'Dancing shoes';
+        this.classes = props.classes;
     }
 
     render() {
         return (
-            <AppBar
-                title={this.title}
-                style={{backgroundColor: blueGrey50}}
-                iconElementLeft={iconElemen}
-                titleStyle={{color: blueGrey900}}
-            />
+            <div className={this.classes.root}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <IconButton color="contrast" aria-label="Menu">
+                            <Menu />
+                        </IconButton>
+                        <Typography type="title" color="inherit" className={this.classes.flex}>
+                            {this.title}
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+            </div>
         );
     }
 }
 
-export default Header;
+export default withStyles(styleSheet)(Header);

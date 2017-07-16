@@ -1,25 +1,7 @@
 import React, {Component} from 'react';
-// import RaisedButton from 'material-ui/RaisedButton';
-// import Dialog from 'material-ui/Dialog';
-// import {deepOrange500} from 'material-ui/styles/colors';
-// import FlatButton from 'material-ui/FlatButton';
-// import getMuiTheme from 'material-ui/styles/getMuiTheme';
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Grid from './Grid';
-// import MainDrawer from './MainDrawer';
+import StoreGrid from './StoreGrid';
 
-// const styles = {
-//   container: {
-//     textAlign: 'center',
-//     paddingTop: 0,
-//   },
-// };
 
-// const muiTheme = getMuiTheme({
-//   palette: {
-//     accent1Color: deepOrange500,
-//   },
-// });
 
 class Body extends Component {
   constructor(props, context) {
@@ -45,7 +27,7 @@ class Body extends Component {
   render() {
     return (
       <div>
-        <Grid items={this.props.items}/>
+        <StoreGrid items={this.props.items}/>
       </div>
     );
   }

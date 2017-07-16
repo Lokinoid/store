@@ -1,21 +1,22 @@
-class StoreItemsFetcher {
-    static getItemAsync(id) {
-        const item = {
-            id: id,
-            name: 'item_' + id,
-            description: 'description_' + id 
-        };
+import ShoesData from './ShoesData';
 
-        return Promise.resolve(item);
+
+class IdGenerator {
+    static id = 0;
+    static next() {
+        return IdGenerator.id++;
     }
 }
 
 export default class ShoesDataGatherer {
+    patch(item) {
+        item.id = IdGenerator.next();
+        item.img = '/img/' + item.img;
+    }
+
     getItemsAsync(number) {
-        let itemPromises = [];
-        for (let i = 0; i < number; i++) {
-            itemPromises.push(StoreItemsFetcher.getItemAsync(i));
-        }
-        return Promise.all(itemPromises);
+        let items = ShoesData;
+        items.forEach(item => this.patch(item));
+        return Promise.resolve(items);
     }
 }

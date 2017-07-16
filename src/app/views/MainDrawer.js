@@ -1,7 +1,18 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
+import { withStyles, createStyleSheet } from 'material-ui/styles';
+import Button from 'material-ui/Button';
+
+const styleSheet = createStyleSheet('RaisedButtons', theme => ({
+    button: {
+        margin: theme.spacing.unit,
+    },
+    input: {
+        display: 'none',
+    },
+}));
+
 
 export default class MainDrawer extends React.Component {
 
@@ -15,11 +26,18 @@ export default class MainDrawer extends React.Component {
     render() {
         return (
             <div>
-                <RaisedButton
+                <Button 
+                    raised 
+                    className={classes.button}
                     label="Toggle Drawer"
-                    onTouchTap={this.handleToggle}
-                />
-                <Drawer width={200} openSecondary={false} open={this.state.open} >
+                    onTouchTap={this.handleToggle}>
+                    Default
+                </Button>
+
+                <Drawer
+                    width={200} 
+                    openSecondary={false} 
+                    open={this.state.open}>
                     <AppBar title="AppBar" />
                 </Drawer>
             </div>

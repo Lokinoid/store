@@ -1,9 +1,10 @@
-type = 'trainig' | 'children' | 'latin' | 'standart';
-gender = 'male' | 'female';
-color = 'black' | 'yellow';
-heelType = 'euro' | 'standart';
-fabric = 'satin' | 'patent-satin' | 'patent-leather';
+let type = 'training' | 'children' | 'latin' | 'standard';
+let gender = 'male' | 'female';
+let color = 'black' | 'beige' | 'white' | 'tan' | 'caramel' | 'gold' | 'silver';
+let heelType = 'euro' | 'standard' | 'slim' | 'flared';
+let fabric = 'satin' | 'patent-satin' | 'patent-leather' | 'leather';
 
+let ShoesData;
 
 export default ShoesData = [
     {
@@ -103,7 +104,7 @@ export default ShoesData = [
         }
     },
     {
-        img: ['5-M66C-M66-1'.jpg, '5-M66C1-M66-1.jpg'],
+        img: '5-M66C-M66-1.jpg',
         params: {
             model: 'M66C',
             type: 'latin',
@@ -186,7 +187,4 @@ export default ShoesData = [
             heelHight: ['5', '6', '7', '8.5']
         }
     }
-]
-
-
-
+];
