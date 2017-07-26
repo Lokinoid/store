@@ -16,29 +16,27 @@ const styleSheet = createStyleSheet('Header', {
     },
 });
              
-class Header extends React.Component {
+class AppHeader extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.title = 'Dancing shoes';
+        this.title = 'Dance shoes';
         this.classes = props.classes;
     }
 
     render() {
         return (
-            <div className={this.classes.root}>
-                <AppBar position="static">
+                <AppBar position='fixed'>
                     <Toolbar>
-                        <IconButton color="contrast" aria-label="Menu">
+                        {/*<IconButton color='contrast' aria-label='Menu'>
                             <Menu />
-                        </IconButton>
-                        <Typography type="title" color="inherit" className={this.classes.flex}>
+                        </IconButton>*/}
+                        <Typography type='title' color='inherit' className={this.classes.flex}>
                             {this.title}
                         </Typography>
                     </Toolbar>
                 </AppBar>
-            </div>
         );
     }
 }
 
-export default withStyles(styleSheet)(Header);
+export default withStyles(styleSheet)(AppHeader);

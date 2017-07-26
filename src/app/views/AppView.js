@@ -5,16 +5,19 @@ import createMuiTheme from 'material-ui/styles/theme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import createPalette from 'material-ui/styles/palette'
 
-import Header from './Header';
-import Body from './Body';
+import AppHeader from './AppHeader';
+import AppContent from './AppContent';
+import AppDrawer from './AppDrawer';
+
 // import Footer from './Footer';
 
 const styles = {
     container: {
-        textAlign: 'center',
-        paddingTop: 0,
-        margin: 0
-    },
+        width: '100%',
+        display: 'flex',
+        minHeight: '100vh',
+        alignItems: 'stretch'
+    }
 };
 
 const muiTheme = createMuiTheme({
@@ -35,8 +38,9 @@ class AppView extends React.Component {
         return (
             <MuiThemeProvider theme={muiTheme}>
                 <div style={styles.container}>
-                    <Header />
-                    <Body items={this.props.items} />
+                    <AppHeader />
+                    <AppDrawer />
+                    <AppContent items={this.props.items} />
                 </div>
             </MuiThemeProvider>
         );

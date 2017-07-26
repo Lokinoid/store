@@ -16,7 +16,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -28,7 +28,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -40,7 +40,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -52,7 +52,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -64,7 +64,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -76,7 +76,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -88,7 +88,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -100,7 +100,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -112,7 +112,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -124,7 +124,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -136,7 +136,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -148,7 +148,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -160,7 +160,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -172,7 +172,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     },
     {
@@ -184,7 +184,7 @@ export default ShoesData = [
             color: ['beige', 'white', 'tan', 'caramel', 'gold', 'silver'],
             fabric: ['satin', 'leather'],
             heelType: ['slim', 'flared'],
-            heelHight: ['5', '6', '7', '8.5']
+            heelHeight: ['5', '6', '7', '8.5']
         }
     }
 ];

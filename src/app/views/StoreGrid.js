@@ -9,7 +9,9 @@ import StoreGridItem from './StoreGridItem';
 
 const styleSheet = createStyleSheet('StoreGrid', theme => ({
   root: {
-    marginTop: 20,
+    marginTop: 100,
+    marginLeft: 0,
+    marginRight: 0,
     flexGrow: 1,
     width: '100%'
   },
@@ -18,16 +20,16 @@ const styleSheet = createStyleSheet('StoreGrid', theme => ({
     width: 320,
   },
   control: {
-    padding: theme.spacing.unit * 2,
-  },
+    padding: theme.spacing.unit * 2
+  }
 }));
 
 class StoreGrid extends Component {
     constructor(props, context) {
       super(props, context);
       this.classes = this.props.classes;
-      this.state = { gutter: 16 }
-      this.updateGridItems(props.items)
+      this.state = { gutter: 16 };
+      this.updateGridItems(props.items);
     }
 
     updateGridItems(items) {
@@ -48,7 +50,7 @@ class StoreGrid extends Component {
         return (
           <Grid container className={this.classes.root}>
             <Grid item xs={12}>
-              <Grid container className={this.classes.demo} justify="center" gutter={Number(gutter)}>
+              <Grid container className={this.classes.demo} justify="center">
                 {this.gridItems}
               </Grid>
             </Grid>

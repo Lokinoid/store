@@ -7,8 +7,12 @@ import Typography from 'material-ui/Typography';
 import red from 'material-ui/colors/red';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
+import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 import Avatar from 'material-ui/Avatar';
+import Collapse from 'material-ui/transitions/Collapse';
+import classnames from 'classnames';
 
+import DescriptionTable from './DescriptionTable';
 
 
 const styleSheet = createStyleSheet('StoreGridItem', theme => ({
@@ -32,6 +36,23 @@ class StoreGridItem extends React.Component {
         super(props, context);
         this.classes = props.classes;
         this.item = props.item;
+        this.state = { expanded: false };
+    }
+
+    handleExpandClick = () => {
+        this.setState({ expanded: !this.state.expanded });
+    }
+
+    handleShareClick = () => {
+        function reqListener(arg) {
+            console.log(arg);
+            console.log(oReq.response);
+        }
+
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "http://localhost:2006/api/values");
+        oReq.send();
     }
 
     render() {
@@ -53,20 +74,32 @@ class StoreGridItem extends React.Component {
                     <Typography type="headline" component="h6">
                         Model: {this.item.params.model}
                     </Typography>
-                    <Typography component="p">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-                    </Typography>
-                    
                 </CardContent>
-                <CardActions disableActionSpacing>
+                <CardActions>
                     <IconButton aria-label="Add to favorites">
                         <FavoriteIcon />
                     </IconButton>
-                    <IconButton aria-label="Share">
+                    <IconButton aria-label="Share"
+                        onClick={this.handleShareClick}>
                         <ShareIcon />
                     </IconButton>
-                </CardActions>
+                    <div className={this.classes.flexGrow} />
+                    <IconButton
+                        className={classnames(this.classes.expand, {
+                            [this.classes.expandOpen]: this.state.expanded,
+                        })}
+                        onClick={this.handleExpandClick}
+                        aria-expanded={this.state.expanded}
+                        aria-label="Show more"
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+            </CardActions>
+            <Collapse in={this.state.expanded} transitionDuration="auto" unmountOnExit>
+                <CardContent>
+                    <DescriptionTable params={this.item.params} />
+                </CardContent>
+            </Collapse>
             </Card>
         );
     }
